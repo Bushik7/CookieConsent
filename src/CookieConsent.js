@@ -2,6 +2,7 @@ import { COOKIE_CONSENT_KEY } from './constants';
 
 class CookieConsent {
   constructor(selector) {
+    // Управление состоянием
     this.el = document.querySelector(selector);
     if (localStorage.getItem(COOKIE_CONSENT_KEY) !== 'false' && this.el) {
       this.acceptBtn = this.el.querySelector('.cookie-consent__button');
