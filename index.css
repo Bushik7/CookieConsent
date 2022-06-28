@@ -1,0 +1,74 @@
+:root {
+	--background: #007af7;
+	--white-text: #fff;
+	--hover-text: #222;
+	--button-background: #fff;
+	--button-background-hover: #000;
+	--button-text: #007af7;	
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+}
+
+.cookie-consent {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	padding: 1rem 2rem;
+	background: var(--background);
+	color: var(--white-text);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	font-size: 1rem;
+	gap: 2rem;
+	opacity: 1;
+	visibility: visible;
+	flex-wrap: wrap;
+}
+
+.cookie-consent.hide {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.cookie-consent a {
+	color: var(--white-color);
+}
+
+.cookie-consent a:hover {
+	color: var(--hover-text);
+}
+
+.cookie-consent__text {
+	flex: 8 768px;
+}
+
+.cookie-consent__button {
+	display: block;
+	flex: 1 150px;
+	background: var(--button-background);
+	color: var(--button-text);
+	border: none;
+	padding: 0.4rem 1.2rem;
+	cursor: pointer;
+	border-radius: 20px;
+	font-size: 1rem;
+}
+
+.cookie-consent__button:hover {
+	background: var(--button-background-hover);
+		color: var(--white-text);
+}
